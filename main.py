@@ -24,16 +24,20 @@ def peliculas_idioma(Idioma: str):
 
 @app.get('/peliculas_duracion/{pelicula}')
 def peliculas_duracion(pelicula: str):
-    '''Ingresas la pelicula, retornando la duracion y el año'''
+    '''Ingresas la película, retornando la duración y el año'''
+    
     # Filtrar la fila que coincide con el nombre de la película
     pelicula_filtrada = df_movies[df_movies['title'] == pelicula]
+    
+    if pelicula_filtrada.empty:
+        return {'mensaje': 'Película no encontrada'}
     
     # Obtener la duración y el año de lanzamiento de la película filtrada
     duracion = pelicula_filtrada['runtime'].values[0]  # Suponiendo que 'runtime' es la duración
     anio = pelicula_filtrada['release_year'].values[0]  # Suponiendo que 'release_year' es el año de lanzamiento
     
     # Generar el diccionario de retorno
-    respuesta = {'pelicula': pelicula, 'duracion': duracion, 'anio': anio}
+    respuesta = {'pelicula': pelicula, 'duracion': int(duracion), 'anio': int(anio)}
     
     return respuesta
 
