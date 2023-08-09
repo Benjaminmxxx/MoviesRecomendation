@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 import pandas as pd
 
-df_movies = pd.read_csv("/Users/alejandrobenjaminnunezguzman/Desktop/MoviesRecomendation/DatosProcesados/movies.csv")
-df_crew = pd.read_csv("/Users/alejandrobenjaminnunezguzman/Desktop/MoviesRecomendation/DatosProcesados/crew.csv") 
-df_cast = pd.read_csv("/Users/alejandrobenjaminnunezguzman/Desktop/MoviesRecomendation/DatosProcesados/cast.csv")
+df_movies = pd.read_csv("./DatosProcesados/movies.csv")
+df_crew = pd.read_csv("./DatosProcesados/crew.csv") 
+df_cast = pd.read_csv("./DatosProcesados/cast.csv")
 
 app = FastAPI()
 
