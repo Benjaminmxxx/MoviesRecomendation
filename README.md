@@ -17,7 +17,7 @@ Como Data Scientist, mi tarea fue crear el modelo de recomendación desde cero. 
 
 Tenían algunos problemas para su estudio como anidamiento de datos, falta de transformaciones,etc. Para superar estos desafíos, asumí un papel de Data Engineer al principio del proyecto para preparar los datos y establecer las bases para el desarrollo del modelo. Obteniendo los siguientes resultados:
 
-[https://github.com/Benjaminmxxx/MoviesRecomendation/tree/main/DatosProcesados](DataSets Limpios)
+[(DataSets Limpios)([https://github.com/Benjaminmxxx/MoviesRecomendation/tree/main/DatosProcesados)
 
 
 ## Pasos Realizados
