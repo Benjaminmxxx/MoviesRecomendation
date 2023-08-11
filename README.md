@@ -10,7 +10,12 @@ En este proyecto, hemos abordado el desafío de crear un sistema de recomendaci�
 
 ## Rol del Data Scientist
 
-Como Data Scientist, mi tarea fue crear el modelo de recomendación desde cero. Sin embargo, antes de llegar a este punto, se hizo evidente que los datos disponibles eran poco maduros, con problemas como anidamiento de datos, falta de transformaciones. Para superar estos desafíos, asumí un papel de Data Engineer al principio del proyecto para preparar los datos y establecer las bases para el desarrollo del modelo.
+Como Data Scientist, mi tarea fue crear el modelo de recomendación desde cero. Sin embargo, antes de llegar a este punto, se hizo evidente que los datos disponibles eran poco maduros, a continuación se deja un enlace por si se quieren revisar:
+
+[DataSets](https://drive.google.com/drive/u/0/folders/1OXVDvmAxOYmEG15Ns0d8UA9Z6Tbdx34l)
+
+
+, con problemas como anidamiento de datos, falta de transformaciones. Para superar estos desafíos, asumí un papel de Data Engineer al principio del proyecto para preparar los datos y establecer las bases para el desarrollo del modelo.
 
 ## Pasos Realizados
 
