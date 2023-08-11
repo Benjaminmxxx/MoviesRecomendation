@@ -4,7 +4,7 @@ import pandas as pd
 df_movies = pd.read_csv("./DatosProcesados/movies.csv")
 df_crew = pd.read_csv("./DatosProcesados/crew.csv") 
 df_cast = pd.read_csv("./DatosProcesados/cast.csv")
-
+df_recomendation=pd.read_csv("./DatosProcesados/recomendation.csv")
 app = FastAPI()
 
 @app.get('/peliculas_idioma/{Idioma}')
@@ -138,14 +138,15 @@ def get_director(nombre_director: str):
                 'budget_pelicula': row['budget'],
                 'revenue_pelicula': row['revenue']
             })
-        
-        # Generar el diccionario de retorno
-        respuesta = {
-            'director': nombre_director,
-            'retorno_total_director': retorno_total_director,
-            'peliculas': peliculas
-        }
-        return respuesta
-    else:
-        return None
 
+
+# ML
+@app.get('/recomendacion/{titulo}')
+def obtener_recomendaciones_por_titulo(titulo:str):
+    '''Ingresas un nombre de pelicula y te recomienda las similares en una lista''' 
+    filtro = df_recomendation['Movie'] == titulo
+    if filtro.any():  # Verificar si hay al menos una coincidencia en el título
+        recomendaciones = df_recomendation.loc[filtro, 'Recomendacion'].values
+        return recomendaciones[0]
+    else:
+        return None  # No se encontró el título en la lista
