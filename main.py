@@ -141,7 +141,7 @@ def get_director(nombre_director: str):
 
 
 # ML
-@app.get('/recomendacion/{titulo}')
+@app.get('/recomendacion/{titulo:str}')
 def obtener_recomendaciones_por_titulo(titulo:str):
     '''Ingresas un nombre de pelicula y te recomienda las similares en una lista''' 
     filtro = df_recomendation['Movie'] == titulo
@@ -149,4 +149,4 @@ def obtener_recomendaciones_por_titulo(titulo:str):
         recomendaciones = df_recomendation.loc[filtro, 'Recomendacion'].values
         return recomendaciones[0]
     else:
-        return None  # No se encontró el título en la lista
+        return 'No se encontró el título'
