@@ -138,6 +138,15 @@ def get_director(nombre_director: str):
                 'budget_pelicula': row['budget'],
                 'revenue_pelicula': row['revenue']
             })
+                    # Generar el diccionario de retorno
+        respuesta = {
+            'director': nombre_director,
+            'retorno_total_director': retorno_total_director,
+            'peliculas': peliculas
+        }
+        return respuesta
+    else:
+        return 'El director no se encuentra o no es un Director'
 
 
 # ML
